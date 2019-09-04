@@ -10,24 +10,38 @@ let h1 = htmlBuilder.createElementWithText("h1", "Welcome To Nashville", "H-One"
 //main body variable which contains the main content
 let mainBody = htmlBuilder.createElementWithText("main")
 let h2Wrapper = htmlBuilder.createElementWithText("div")
-let h2 = htmlBuilder.createElementWithText("h2", )
+let h2 = htmlBuilder.createElementWithText("h2", "Search")
 
-let firstArticle = htmlBuilder.createElementWithText()
+//Creating 1st & 2nd articles. The first article will hold the form containing fieldsets and user inputs 
+// The second article will contain the results and itinerary setions
 
-//form to hold fieldsets
-let form = htmlBuilder.createElementWithText()
-
-//fieldset variables
-let foodFieldSet = htmlBuilder.createElementWithText()
-let conceertFieldSet = htmlBuilder.createElementWithText()
-let eventsFieldSet = htmlBuilder.createElementWithText()
-let parksFieldSet = htmlBuilder.createElementWithText()
+let secondArticle = htmlBuilder.createElementWithText("article")
+let resultsSection = htmlBuilder.createElementWithText("section")
+let itinerarysection = htmlBuilder.createElementWithText("section")
 
 
-let foodInput = foodFieldSet = htmlBuilder.createElementWithText()
-let food = foodFieldSet = htmlBuilder.createElementWithText()
-let foodInput = foodFieldSet = htmlBuilder.createElementWithText()
-let foodInput = foodFieldSet = htmlBuilder.createElementWithText()
+// Creating form to hold fieldsets
+let form = htmlBuilder.createElementWithText("form")
+
+// Creating fieldset variables
+let firstArticle = htmlBuilder.createElementWithText("article")
+let foodFieldSet = htmlBuilder.createElementWithText("fieldset")
+let concertFieldSet = htmlBuilder.createElementWithText("fieldset")
+let eventsFieldSet = htmlBuilder.createElementWithText("fieldset")
+let parksFieldSet = htmlBuilder.createElementWithText("fieldset")
+
+// Creating 4 user input elements
+let foodInput = htmlBuilder.createElementWithText("input")
+let parksInput = htmlBuilder.createElementWithText("input")
+let concertsInput = htmlBuilder.createElementWithText("input")
+let eventsInput = htmlBuilder.createElementWithText("input")
+
+
+//input placeholders
+foodInput.placeholder = "search by food type"
+parksInput.placeholder = "parks by feature"
+concertsInput.placeholder = "concerts input"
+eventsInput.placeholder = "search events"
 
 
 
@@ -45,3 +59,20 @@ console.log(displayContainer)
 displayContainer.appendChild(mainBody)
 mainBody.appendChild(h2Wrapper)
 h2Wrapper.appendChild(h2)
+console.log(displayContainer)
+
+
+// appending articles to the main element
+
+mainBody.appendChild(firstArticle)
+firstArticle.appendChild(form)
+//appending fieldsets to form and then appending inputs to the fieldsets
+form.appendChild(foodFieldSet).appendChild(foodInput)
+form.appendChild(concertFieldSet).appendChild(concertsInput)
+form.appendChild(eventsFieldSet).appendChild(eventsInput)
+form.appendChild(parksFieldSet).appendChild(parksInput)
+
+// Appending second article to the main body
+mainBody.appendChild(secondArticle)
+secondArticle.appendChild(resultsSection)
+secondArticle.appendChild(itinerarysection)
