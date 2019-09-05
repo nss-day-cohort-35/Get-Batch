@@ -26,7 +26,7 @@ let buildForm = {
         //Creating 1st & 2nd articles. The first article will hold the form containing fieldsets and user inputs 
         // The second article will contain the results and itinerary sections.
 
-        secondArticle = htmlBuilder.createElementWithText("article", )
+        secondArticle = htmlBuilder.createElementWithText("article",)
         resultsSection = htmlBuilder.createElementWithText("section")
         resultsH2Wrapper = htmlBuilder.createElementWithText("div", undefined, "results-h2-wrapper", "resultsH2Wrapper", undefined, undefined)
         resultsH2 = htmlBuilder.createElementWithText("h2", "Results", "results-h2", "resultsH2", undefined, undefined)
@@ -45,15 +45,15 @@ let buildForm = {
         parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 
         // Creating 4 user input elements
-        foodInput = htmlBuilder.createElementWithText("select", undefined, "food-select", "food")
-        parksInput = htmlBuilder.createElementWithText("input")
+        foodInput = htmlBuilder.createElementWithText("input", undefined, "food-input", "foodInput", undefined, undefined)
+        parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-input", "parksInput", undefined, undefined)
         concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "date")
         eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select", "eventSelect", undefined, undefined)
 
         // Creating footer element containing a div, ul, 4 li and 4 anchor tags
 
-        footer = htmlBuilder.createElementWithText("footer", )
-        linkWrapper = htmlBuilder.createElementWithText("div")
+        footer = htmlBuilder.createElementWithText("footer",undefined,"footer-element","footerElement" )
+        linkWrapper = htmlBuilder.createElementWithText("div","link-wrapper",)
         ul = htmlBuilder.createElementWithText("ul")
         liOne = htmlBuilder.createElementWithText("li")
         liTwo = htmlBuilder.createElementWithText("li")
@@ -65,13 +65,27 @@ let buildForm = {
         a3 = htmlBuilder.createAnchorElement("a", undefined, "anchor-three", "anchorThree", undefined)
         a4 = htmlBuilder.createAnchorElement("a", undefined, "anchor-four", "anchorFour", undefined)
         // Creating options for events select element
+        
+        // eventSelect.setAttribute = "selected,selected"
         eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", undefined, undefined, "Food_and_Drink")
+        eventSelect = htmlBuilder.createElementWithText("option", "Select Event Type", undefined, undefined, "Select Event Type")
         eventSelect2 = htmlBuilder.createElementWithText("option", "Family Friendly", undefined, undefined, "Family")
         eventSelect3 = htmlBuilder.createElementWithText("option", "Hobbies", undefined, undefined, "Hobbies")
         eventSelect4 = htmlBuilder.createElementWithText("option", "Sports", undefined, undefined, "Sports")
         eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", undefined, undefined, "Arts")
 
-        // Creating button for feildset
+        //Creating options element for the park selections
+        parkSelect1 = htmlBuilder.createElementWithText("option", "VolleyBall", undefined, undefined, "volleyball")
+        parkSelect2 = htmlBuilder.createElementWithText("option", "Baseball Fields", undefined, undefined, "baseballFields")
+        parkSelect3 = htmlBuilder.createElementWithText("option", "Basketball Courts", undefined, undefined, "basketballCourts")
+        parkSelect4 = htmlBuilder.createElementWithText("option", "Golf Course", undefined, undefined, "golfCourse")
+        parkSelect5 = htmlBuilder.createElementWithText("option", "Football Fields", undefined, undefined, "footballFields")
+        parkSelect6 = htmlBuilder.createElementWithText("option", "Dog Parks", undefined, undefined, "dogParks")
+        parkSelect7 = htmlBuilder.createElementWithText("option", "Nature Center", undefined, undefined, "natureCenters")
+        parkSelect8 = htmlBuilder.createElementWithText("option", "Parks including lakes", undefined, undefined, "lakes")
+
+
+        // Creating button for fieldset
         eventButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "eventButton")
         parkButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "parkButton")
         concertButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "concertButton")
@@ -113,14 +127,25 @@ let buildForm = {
         form.appendChild(eventsFieldSet).appendChild(eventsInput).appendChild(eventSelect1)
         form.appendChild(parksFieldSet).appendChild(parksInput)
 
-        //Appending event options to select element
+        //Appending event options to eventSelect element
+        eventsInput.appendChild(eventSelect)
         eventsInput.appendChild(eventSelect1)
         eventsInput.appendChild(eventSelect2)
         eventsInput.appendChild(eventSelect3)
         eventsInput.appendChild(eventSelect4)
         eventsInput.appendChild(eventSelect5)
 
-        //Appending button to feildset
+        //Appending parks options to parkSelect element
+        parksInput.appendChild(parkSelect1)
+        parksInput.appendChild(parkSelect2)
+        parksInput.appendChild(parkSelect3)
+        parksInput.appendChild(parkSelect4)
+        parksInput.appendChild(parkSelect5)
+        parksInput.appendChild(parkSelect6)
+        parksInput.appendChild(parkSelect7)
+        parksInput.appendChild(parkSelect8)
+
+        //Appending button to fieldset
         eventsFieldSet.appendChild(eventButton)
         parksFieldSet.appendChild(parkButton)
         concertFieldSet.appendChild(concertButton)
@@ -133,3 +158,4 @@ let buildForm = {
     }
 
 }
+buildForm.invokeBuildForm()
