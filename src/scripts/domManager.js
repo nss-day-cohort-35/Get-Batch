@@ -41,7 +41,7 @@ let parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 let foodInput = htmlBuilder.createElementWithText("input")
 let parksInput = htmlBuilder.createElementWithText("input")
 let concertsInput = htmlBuilder.createElementWithText("input")
-let eventsInput = htmlBuilder.createElementWithText("input")
+let eventsInput = htmlBuilder.createElementWithText("select", undefined, "eventSelect")
 
 // Creating footer element containing a div, ul, 4 li and 4 anchor tags
 
@@ -57,6 +57,18 @@ let a1 = htmlBuilder.createAnchorElement("a")
 let a2 = htmlBuilder.createAnchorElement("a")
 let a3 = htmlBuilder.createAnchorElement("a")
 let a4 = htmlBuilder.createAnchorElement("a")
+// Creating options for events select element
+let eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", undefined, undefined, "Food_and_Drink")
+let eventSelect2 = htmlBuilder.createElementWithText("option", "Family Friendly", undefined, undefined, "Family")
+let eventSelect3 = htmlBuilder.createElementWithText("option", "Hobbies", undefined, undefined, "Hobbies")
+let eventSelect4 = htmlBuilder.createElementWithText("option", "Sports", undefined, undefined, "Sports")
+let eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", undefined, undefined, "Arts")
+
+// Creating button for feildset
+let eventButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "eventButton")
+let parkButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "parkButton")
+let concertButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "concertButton")
+let foodButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "foodButton")
 
 //input placeholders
 foodInput.placeholder = "search by food type"
@@ -87,11 +99,25 @@ console.log(displayContainer)
 
 mainBody.appendChild(firstArticle)
 firstArticle.appendChild(form)
+
 //appending fieldsets to form and then appending inputs to the fieldsets
 form.appendChild(foodFieldSet).appendChild(foodInput)
 form.appendChild(concertFieldSet).appendChild(concertsInput)
-form.appendChild(eventsFieldSet).appendChild(eventsInput)
+form.appendChild(eventsFieldSet).appendChild(eventsInput).appendChild(eventSelect1)
 form.appendChild(parksFieldSet).appendChild(parksInput)
+
+// appending options to select element
+eventsInput.appendChild(eventSelect1)
+eventsInput.appendChild(eventSelect2)
+eventsInput.appendChild(eventSelect3)
+eventsInput.appendChild(eventSelect4)
+eventsInput.appendChild(eventSelect5)
+
+//apendning button to feildset
+eventsFieldSet.appendChild(eventButton)
+parksFieldSet.appendChild(parkButton)
+concertFieldSet.appendChild(concertButton)
+foodFieldSet.appendChild(foodButton)
 
 // Appending second article to the main body
 mainBody.appendChild(secondArticle)
