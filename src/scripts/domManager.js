@@ -15,8 +15,8 @@ let h1Wrapper = htmlBuilder.createElementWithText("div", undefined, "h1-wrapper"
 let h1 = htmlBuilder.createElementWithText("h1", "Welcome To Nashville", "H-One", undefined, undefined)
 
 //main body variable which contains the main content
-let mainBody = htmlBuilder.createElementWithText("main",undefined,"main-body","")
-let h2Wrapper = htmlBuilder.createElementWithText("div",undefined,)
+let mainBody = htmlBuilder.createElementWithText("main", undefined, "main-body", "")
+let h2Wrapper = htmlBuilder.createElementWithText("div", undefined, )
 let h2 = htmlBuilder.createElementWithText("h2", "Search")
 
 //Creating 1st & 2nd articles. The first article will hold the form containing fieldsets and user inputs 
@@ -40,7 +40,7 @@ let parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 // Creating 4 user input elements
 let foodInput = htmlBuilder.createElementWithText("input")
 let parksInput = htmlBuilder.createElementWithText("input")
-let concertsInput = htmlBuilder.createElementWithText("input")
+let concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "date")
 let eventsInput = htmlBuilder.createElementWithText("select", undefined, "eventSelect")
 
 // Creating footer element containing a div, ul, 4 li and 4 anchor tags
@@ -53,10 +53,10 @@ let liTwo = htmlBuilder.createElementWithText("li")
 let liThree = htmlBuilder.createElementWithText("li")
 let liFour = htmlBuilder.createElementWithText("li")
 
-let a1 = htmlBuilder.createAnchorElement("a")
-let a2 = htmlBuilder.createAnchorElement("a")
-let a3 = htmlBuilder.createAnchorElement("a")
-let a4 = htmlBuilder.createAnchorElement("a")
+let a1 = htmlBuilder.createAnchorElement("a", undefined, "anchor-one", "anchorOne", undefined)
+let a2 = htmlBuilder.createAnchorElement("a", undefined, "anchor-two", "anchorTwo")
+let a3 = htmlBuilder.createAnchorElement("a", undefined, )
+let a4 = htmlBuilder.createAnchorElement("a", undefined, )
 // Creating options for events select element
 let eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", undefined, undefined, "Food_and_Drink")
 let eventSelect2 = htmlBuilder.createElementWithText("option", "Family Friendly", undefined, undefined, "Family")
@@ -113,7 +113,7 @@ eventsInput.appendChild(eventSelect3)
 eventsInput.appendChild(eventSelect4)
 eventsInput.appendChild(eventSelect5)
 
-//apendning button to feildset
+//Appending button to feildset
 eventsFieldSet.appendChild(eventButton)
 parksFieldSet.appendChild(parkButton)
 concertFieldSet.appendChild(concertButton)
@@ -123,5 +123,3 @@ foodFieldSet.appendChild(foodButton)
 mainBody.appendChild(secondArticle)
 secondArticle.appendChild(resultsSection)
 secondArticle.appendChild(itinerarysection)
-
-
