@@ -6,12 +6,12 @@ const htmlBuilder = {
     createElementWithText(element, text, id, className, elementValue) {
         const newElement = document.createElement(element)
         if (text) {
-            newElement.textContent = text   
-        }                                                                                 
-                                                                                                
-        if (id) {                                                                                
-            newElement.id = id                                                                    
-                                                                                                  
+            newElement.textContent = text
+        }
+
+        if (id) {
+            newElement.id = id
+
         }
 
         if (className) {
@@ -22,7 +22,7 @@ const htmlBuilder = {
         }
         return newElement
     },
-    
+
 
     // Function to clear the contents of the element which is passed as an argument.
     clearContainer(elementToClear) {
@@ -31,23 +31,39 @@ const htmlBuilder = {
         }
     },
     //Function to build and return list element with anchor and href
-    createAnchorElement(text, className, buttonId) {
-        
+    createAnchorElement(element,text, className, elementValue, buttonId) {
+
         // const newListElement = document.createElement("li")
-        const newAnchorElement = document.createElement("a")
-        newAnchorElement.setAttribute("href", "#")
+        const newAnchorElement = document.createElement(element)
+        if (text) {
+            newAnchorElement.textContent = text
+        }
+
+        if (className) {
+            newAnchorElement.classList.add(className)
+
+        }
+
+        if (elementValue) {
+            newAnchorElement.setAttribute("href", "#")
+        }
+
+        if (buttonId) {
+            newAnchorElement.id = buttonId
+        }
+
         newAnchorElement.textContent = text
         newAnchorElement.classList.add(className)
-        newAnchorElement.id = buttonId 
+        newAnchorElement.id = buttonId
         //newListElement.appendChild(newAnchorElement)
 
-return newAnchorElement
+        return newAnchorElement
 
     }
 
 
 
-    
+
 
 
 
