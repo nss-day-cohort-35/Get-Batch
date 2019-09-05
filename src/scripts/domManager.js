@@ -67,8 +67,8 @@ let buildForm = {
         // Creating options for events select element
         
         // eventSelect.setAttribute = "selected,selected"
-        eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", undefined, undefined, "Food_and_Drink")
         eventSelect = htmlBuilder.createElementWithText("option", "Select Event Type", undefined, undefined, "Select Event Type")
+        eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", undefined, undefined, "Food_and_Drink")
         eventSelect2 = htmlBuilder.createElementWithText("option", "Family Friendly", undefined, undefined, "Family")
         eventSelect3 = htmlBuilder.createElementWithText("option", "Hobbies", undefined, undefined, "Hobbies")
         eventSelect4 = htmlBuilder.createElementWithText("option", "Sports", undefined, undefined, "Sports")
