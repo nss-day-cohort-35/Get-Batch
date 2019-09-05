@@ -3,7 +3,7 @@
 
 const htmlBuilder = {
     //Function to build and return an element taking in element, text, and id as arguments.
-    createElementWithText(element, text, id, className, elementValue) {
+    createElementWithText(element, text, id, className, elementValue, type) {
         const newElement = document.createElement(element)
         if (text) {
             newElement.textContent = text
@@ -19,6 +19,9 @@ const htmlBuilder = {
         }
         if (elementValue) {
             newElement.setAttribute("value", elementValue)
+        } 
+        if (type){
+            newElement.setAttribute(type)
         }
         return newElement
     },
