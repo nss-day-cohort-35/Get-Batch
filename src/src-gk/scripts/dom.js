@@ -14,7 +14,6 @@ const restaurantHTML = (restaurantObject) => {
 
 
 const restaurantResults = document.querySelector("#restaurantResults");
-console.log(restaurantResults)
+console.table(restaurantResults)
 const printToDOM = (htmlString) => {
     restaurantResults.innerHTML += restaurantHTML}
-export default printToDom

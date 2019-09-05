@@ -4,7 +4,11 @@
 // const restaurantName = document.querySelector("#restaurantsSearchField")
 
 const restaurantFetcher = () => {
-   return fetch(`https://opentable.herokuapp.com/api/restaurants?city=Nashville&per_page=10`)
+   return fetch(URL, {
+    mode: 'cors',
+    headers: { "user-key":"1970c843d733f5911deb2a3cd0dc2c4b",
+      'Access-Control-Allow-Origin':'*'
+    }
         .then(r => r.json())
         .then(results => {
             console.table(results)
@@ -27,4 +31,3 @@ const restaurantFetcher = () => {
     })
     })
 }
-export default restaurantFetcher

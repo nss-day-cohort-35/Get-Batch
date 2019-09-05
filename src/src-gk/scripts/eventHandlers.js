@@ -1,5 +1,6 @@
 
-
+const searchRestaurants = document.querySelector("#searchRestaurantButton")
+searchRestaurants.addEventListener("click",{ Console.table(searchRestaurants.value)})
 
 
 
@@ -8,4 +9,3 @@ const saveRestaurantButton = document.querySelector("#saveRestaurantButton")
         document.querySelector("#restaurantResults").innerHTML = ""
         restaurantFetcher()
     })
-    export default saveRestaurantButton

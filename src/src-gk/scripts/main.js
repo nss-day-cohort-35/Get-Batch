@@ -1,9 +1,5 @@
 
 
-import restaurantFetcher from  "./API-Manager.js"
-import "./eventHandlers.js"
-import  "./dom.js"
-
 const restResultsSection = document.querySelector("#restaurantResults")
 
 const searchButtonInput = document.querySelector("#searchRestaurantButton");
