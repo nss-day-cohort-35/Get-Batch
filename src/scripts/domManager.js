@@ -23,7 +23,7 @@ let h2 = htmlBuilder.createElementWithText("h2", "Search")
 // The second article will contain the results and itinerary setions
 
 let secondArticle = htmlBuilder.createElementWithText("article")
-let resultsSection = htmlBuilder.createElementWithText("section")
+let resultsSection = htmlBuilder.createElementWithText("section", undefined, "results-section")
 let itinerarysection = htmlBuilder.createElementWithText("section")
 
 
@@ -41,7 +41,7 @@ let parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 let foodInput = htmlBuilder.createElementWithText("input")
 let parksInput = htmlBuilder.createElementWithText("input")
 let concertsInput = htmlBuilder.createElementWithText("input")
-let eventsInput = htmlBuilder.createElementWithText("select", undefined, "eventSelect")
+let eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select")
 
 // Creating footer element containing a div, ul, 4 li and 4 anchor tags
 
@@ -65,18 +65,16 @@ let eventSelect4 = htmlBuilder.createElementWithText("option", "Sports", undefin
 let eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", undefined, undefined, "Arts")
 
 // Creating button for feildset
-let eventButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "eventButton")
-let parkButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "parkButton")
-let concertButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "concertButton")
-let foodButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "foodButton")
+let eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
+let parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
+let concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
+let foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
 
 //input placeholders
 foodInput.placeholder = "search by food type"
 parksInput.placeholder = "parks by feature"
 concertsInput.placeholder = "concerts input"
 eventsInput.placeholder = "search events"
-
-
 
 
 

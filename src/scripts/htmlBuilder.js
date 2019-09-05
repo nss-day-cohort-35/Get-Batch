@@ -21,7 +21,7 @@ const htmlBuilder = {
             newElement.setAttribute("value", elementValue)
         } 
         if (type){
-            newElement.setAttribute(type)
+            newElement.setAttribute("type", type)
         }
         return newElement
     },
