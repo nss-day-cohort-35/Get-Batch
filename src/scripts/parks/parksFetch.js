@@ -9,7 +9,7 @@ const parksCat = value => {
     } else if (value === "basketballCourts") {
         category = "basketball_courts=Yes";
     } else if (value === "footballFields") {
-        category = "football_fields=Yes";
+        category = "football_multi_purpose_fields=Yes";
     } else if (value === "dogParks") {
         category = "dog_park=Yes";
     } else if (value === "natureCenters") {
@@ -23,15 +23,13 @@ const parksCat = value => {
 };
 
 const getParks = value => {
-    fetch(`https://data.nashville.gov/resource/74d7-b74t.json${value}`, {
-            headers: {
-                Accept: "application/json",
-                "X-App-Token": "PBNHauq9FYSAXZ8QQhUL9C1rh"
-            }
-        })
-        .then(parksData => parksData.json())
-        .then(parsedParks => {
-            parsedParks.array.forEach(value => parksInf(value));
-            console.table("parsed Data", parsedParks);  
-        });
-};
+        fetch(`https://data.nashville.gov/resource/74d7-b74t.json?${value}`, {
+                headers: {
+                    Accept: "application/json",
+                    "X-App-Token": "PBNHauq9FYSAXZ8QQhUL9C1rh"
+                }
+            })
+            .then(parksData => parksData.json())
+            .then(parsedParks => {
+                parksInfo(parsedParks)
+            })}
