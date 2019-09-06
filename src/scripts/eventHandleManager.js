@@ -30,7 +30,7 @@ function saveToDom(itemId){
 
 // Function to make elements that will populate the DOM
 function makeItinerary(item){
-    console.log("item", item)
+    htmlBuilder.clearContainer(resultsInj)
     let myItinerary = document.querySelector("#itinerary-section")
     let builtItem = htmlBuilder.createElementWithText("li", `Event: ${item.textContent}`, "my-event")
     myItinerary.appendChild(builtItem)
