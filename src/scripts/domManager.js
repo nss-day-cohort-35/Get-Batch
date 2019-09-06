@@ -26,13 +26,14 @@ let buildForm = {
         //Creating 1st & 2nd articles. The first article will hold the form containing fieldsets and user inputs 
         // The second article will contain the results and itinerary sections.
 
-        secondArticle = htmlBuilder.createElementWithText("article",)
+        secondArticle = htmlBuilder.createElementWithText("article", )
         resultsSection = htmlBuilder.createElementWithText("section", undefined, "results-section")
         resultsH2Wrapper = htmlBuilder.createElementWithText("div", undefined, "results-h2-wrapper", "resultsH2Wrapper", undefined, undefined)
         resultsH2 = htmlBuilder.createElementWithText("h2", "Results", "results-h2", "resultsH2", undefined, undefined)
 
         itinerarysection = htmlBuilder.createElementWithText("section", undefined, "itinerary-section", "itinerarySection", undefined, undefined)
-
+        itineraryWrapper = htmlBuilder.createElementWithText("div", undefined, "itinerary-wrapper", undefined)
+        itineraryH2 = htmlBuilder.createElementWithText("h2", "My Itinerary", "my-itinerary", undefined, )
 
         // Creating form to hold fieldsets
         form = htmlBuilder.createElementWithText("form")
@@ -46,14 +47,14 @@ let buildForm = {
 
         // Creating 4 user input elements
         foodInput = htmlBuilder.createElementWithText("input", undefined, "food-input", "foodInput", undefined, undefined)
-        parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-input", "parksInput", undefined, undefined)
+        parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-select", "parksInput", undefined, undefined)
         concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "date")
         eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select", "eventSelect", undefined, undefined)
 
         // Creating footer element containing a div, ul, 4 li and 4 anchor tags
 
-        footer = htmlBuilder.createElementWithText("footer",undefined,"footer-element","footerElement" )
-        linkWrapper = htmlBuilder.createElementWithText("div","link-wrapper",)
+        footer = htmlBuilder.createElementWithText("footer", undefined, "footer-element", "footerElement")
+        linkWrapper = htmlBuilder.createElementWithText("div", "link-wrapper", )
         ul = htmlBuilder.createElementWithText("ul")
         liOne = htmlBuilder.createElementWithText("li")
         liTwo = htmlBuilder.createElementWithText("li")
@@ -65,7 +66,7 @@ let buildForm = {
         a3 = htmlBuilder.createAnchorElement("a", undefined, "anchor-three", "anchorThree", undefined)
         a4 = htmlBuilder.createAnchorElement("a", undefined, "anchor-four", "anchorFour", undefined)
         // Creating options for events select element
-        
+
         // eventSelect.setAttribute = "selected,selected"
         eventSelect = htmlBuilder.createElementWithText("option", "Select Event Type", undefined, undefined, "Select Event Type")
         eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", undefined, undefined, "Food_and_Drink")
@@ -86,11 +87,11 @@ let buildForm = {
 
 
         // Creating button for fieldset
-         eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
-         parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
-         concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
-         foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
-        
+        eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
+        parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
+        concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
+        foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
+
         //Input placeholders
         foodInput.placeholder = "search by food type"
         parksInput.placeholder = "parks by feature"
@@ -156,8 +157,11 @@ let buildForm = {
         secondArticle.appendChild(resultsH2Wrapper)
         resultsH2Wrapper.appendChild(resultsH2)
         secondArticle.appendChild(resultsSection)
+        secondArticle.appendChild(itineraryWrapper)
+        secondArticle.appendChild(itinerarysection)
+        itineraryWrapper.appendChild(itineraryH2)
+        
     }
 
 }
 buildForm.invokeBuildForm()
-
