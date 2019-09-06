@@ -23,6 +23,10 @@ const htmlBuilder = {
         if (type){
             newElement.setAttribute("type", type)
         }
+        if (type){
+            newElement.setAttribute("type",type)
+        }
+
         return newElement
     },
 
@@ -54,6 +58,7 @@ const htmlBuilder = {
         if (buttonId) {
             newAnchorElement.id = buttonId
         }
+        
 
         newAnchorElement.textContent = text
         newAnchorElement.classList.add(className)
