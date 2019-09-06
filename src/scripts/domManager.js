@@ -32,7 +32,8 @@ let buildForm = {
         resultsH2 = htmlBuilder.createElementWithText("h2", "Results", "results-h2", "resultsH2", undefined, undefined)
 
         itinerarysection = htmlBuilder.createElementWithText("section", undefined, "itinerary-section", "itinerarySection", undefined, undefined)
-
+        itineraryWrapper = htmlBuilder.createElementWithText("div", undefined, "itinerary-wrapper", undefined)
+        itineraryH2 = htmlBuilder.createElementWithText("h2", "My Itinerary", "my-itinerary", undefined)
 
         // Creating form to hold fieldsets
         form = htmlBuilder.createElementWithText("form")
@@ -91,6 +92,12 @@ let buildForm = {
          concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
          foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
         
+        //added classes to buttons for styling
+        eventButton.classList.add("btn-primary")
+        parkButton.classList.add("btn-primary")
+        concertButton.classList.add("btn-primary")
+        foodButton.classList.add("btn-primary")
+
         //Input placeholders
         foodInput.placeholder = "search by food type"
         parksInput.placeholder = "parks by feature"
@@ -156,6 +163,10 @@ let buildForm = {
         secondArticle.appendChild(resultsH2Wrapper)
         resultsH2Wrapper.appendChild(resultsH2)
         secondArticle.appendChild(resultsSection)
+        secondArticle.appendChild(itineraryWrapper)
+        secondArticle.appendChild(itinerarysection)
+        itineraryWrapper.appendChild(itineraryH2)
+    
     }
 
 }
