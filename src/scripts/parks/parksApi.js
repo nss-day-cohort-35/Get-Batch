@@ -6,13 +6,7 @@
 let parks = [];
 
 const getParks = (value) => {
-    fetch('', {
-        headers: {
-            "Authorization": ""
-
-        }
-
-    })
+    fetch('https://data.nashville.gov/resource/74d7-b74t.json$$app_token=PBNHauq9FYSAXZ8QQhUL9C1rh')
     .then(parksData => parksData.json())
     .then(parksData => parksData.parks)
     .then(parsedParks => {

@@ -14,3 +14,5 @@ getEventButton.addEventListener("click", function() {
     getEvents(searchEvents)
     console.log("gottem")
 })
+
+
