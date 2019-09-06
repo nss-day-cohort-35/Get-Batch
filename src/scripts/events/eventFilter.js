@@ -1,7 +1,7 @@
 // Function to loop threw event array and build DOM components for each item (up to 5)
 let resultsInj = document.querySelector("#results-section")
 function eventInfo(value){
-    console.log("my log", value.length)
+    console.log("my log", value.length) 
     if(value.length === 0){
         alert("There are no events for this category today!")
     } else {

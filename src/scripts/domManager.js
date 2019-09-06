@@ -83,14 +83,12 @@ displayContainer.appendChild(divWrapper)
 divWrapper.appendChild(mainHeader)
 mainHeader.append(h1Wrapper)
 h1Wrapper.appendChild(h1)
-console.log(displayContainer)
 
 
 //Appending the main body to the display container and then appending corresponding child elements
 displayContainer.appendChild(mainBody)
 mainBody.appendChild(h2Wrapper)
-h2Wrapper.appendChild(h2)
-console.log(displayContainer)
+h2Wrapper.appendChild(h2) 
 
 
 // appending articles to the main element
