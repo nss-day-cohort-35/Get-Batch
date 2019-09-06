@@ -17,6 +17,7 @@ getEventButton.addEventListener("click", function() {
     console.log("gottem")
 })
 
+// saving selected fetched item into a DOM component adn inserting it into My Itinerary
 function saveToDom(itemId){
     let saveToDomButton = document.querySelector(`#resultSaveButton-${itemId}`)
     let eventResult = document.querySelector(`#event-${itemId}`)
@@ -26,6 +27,7 @@ function saveToDom(itemId){
     })
 }
 
+// Function to make elements that will populate the DOM
 function makeItinerary(item){
     console.log("item", item)
     let myItinerary = document.querySelector("#itinerary-section")
@@ -33,3 +35,7 @@ function makeItinerary(item){
     myItinerary.appendChild(builtItem)
 }
 
+// Event Listener for concerts
+getConcertButton.addEventListener("click", () =>{
+    getConcerts()
+})
