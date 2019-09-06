@@ -6,6 +6,7 @@ let getFoodButton = document.querySelector("#food-button")
 
 // making a reference to the select element
 let selectEvent = document.querySelector("#event-select")
+let selectPark = document.querySelector("#parks-select")
 
 // adding event listeners to all button
 getEventButton.addEventListener("click", function() {
@@ -14,3 +15,18 @@ getEventButton.addEventListener("click", function() {
     getEvents(searchEvents)
     console.log("gottem")
 })
+
+
+getParkButton.addEventListener("click", function(){
+    let getOption = selectPark.options[selectPark.selectedIndex].value
+    let searchParks = parksCat(getOption)
+    getParks(searchParks)
+
+})
+
+
+
+
+
+
+
