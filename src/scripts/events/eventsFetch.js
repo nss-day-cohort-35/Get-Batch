@@ -9,7 +9,7 @@ let family = "115";
 const eventCatNum = (value) => {
     let category = "";
     if(value === "Food_and_Drink"){
-        category = food_and_Drink;
+        category = food_and_Drink
     } else if (value === "Sports"){
         category = sports;
     } else if (value === "Arts"){
@@ -37,6 +37,6 @@ const getEvents = (value) => {
     .then(parsedEvent => {
         events.push(parsedEvent)
         events.forEach(value => eventInfo(value))
-        console.log("parsedData", parsedEvent)
+        console.table("parsedData", parsedEvent)
     })
 }
