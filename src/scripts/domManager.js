@@ -27,7 +27,7 @@ let buildForm = {
         // The second article will contain the results and itinerary sections.
 
         secondArticle = htmlBuilder.createElementWithText("article",)
-        resultsSection = htmlBuilder.createElementWithText("section")
+        resultsSection = htmlBuilder.createElementWithText("section", undefined, "results-section")
         resultsH2Wrapper = htmlBuilder.createElementWithText("div", undefined, "results-h2-wrapper", "resultsH2Wrapper", undefined, undefined)
         resultsH2 = htmlBuilder.createElementWithText("h2", "Results", "results-h2", "resultsH2", undefined, undefined)
 
@@ -86,11 +86,11 @@ let buildForm = {
 
 
         // Creating button for fieldset
-        eventButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "eventButton")
-        parkButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "parkButton")
-        concertButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "concertButton")
-        foodButton = htmlBuilder.createElementWithText("button", "Search", "btn btn-primary", "foodButton")
-
+         eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
+         parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
+         concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
+         foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
+        
         //Input placeholders
         foodInput.placeholder = "search by food type"
         parksInput.placeholder = "parks by feature"
@@ -155,7 +155,9 @@ let buildForm = {
         mainBody.appendChild(secondArticle)
         secondArticle.appendChild(resultsH2Wrapper)
         resultsH2Wrapper.appendChild(resultsH2)
+        secondArticle.appendChild(resultsSection)
     }
 
 }
 buildForm.invokeBuildForm()
+
