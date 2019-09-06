@@ -33,7 +33,7 @@ let buildForm = {
 
         itinerarysection = htmlBuilder.createElementWithText("section", undefined, "itinerary-section", "itinerarySection", undefined, undefined)
         itineraryWrapper = htmlBuilder.createElementWithText("div", undefined, "itinerary-wrapper", undefined)
-        itineraryH2 = htmlBuilder.createElementWithText("h2", "My Itinerary", "my-itinerary", undefined, )
+        itineraryH2 = htmlBuilder.createElementWithText("h2", "My Itinerary", "my-itinerary", undefined)
 
         // Creating form to hold fieldsets
         form = htmlBuilder.createElementWithText("form")
@@ -87,10 +87,16 @@ let buildForm = {
 
 
         // Creating button for fieldset
-        eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
-        parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
-        concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
-        foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
+         eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
+         parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
+         concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
+         foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
+        
+        //added classes to buttons for styling
+        eventButton.classList.add("btn-primary")
+        parkButton.classList.add("btn-primary")
+        concertButton.classList.add("btn-primary")
+        foodButton.classList.add("btn-primary")
 
         //Input placeholders
         foodInput.placeholder = "search by food type"
@@ -159,8 +165,7 @@ let buildForm = {
         secondArticle.appendChild(resultsSection)
         secondArticle.appendChild(itineraryWrapper)
         secondArticle.appendChild(itinerarysection)
-        itineraryWrapper.appendChild(itineraryH2)
-        
+        itineraryWrapper.appendChild(itineraryH2) 
     }
 
 }
