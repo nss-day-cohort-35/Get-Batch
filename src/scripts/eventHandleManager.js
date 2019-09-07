@@ -29,11 +29,11 @@ function saveToDom(itemId){
         saveToDomButton.addEventListener("click", () => {
             console.log("Event", allResults)
             makeItinerary(allResults[itemId])})
-    } else if(eventResult != null){
+    } else if(parkResult != null){
         allResults.push(parkResult)
         saveToDomButton.addEventListener("click", () => {
             console.log("Event", allResults)
-            makeItinerary(allResults)
+            makeItinerary(allResults[itemId])
         })
     }
 }
