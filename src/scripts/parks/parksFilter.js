@@ -1,6 +1,6 @@
  resultsInj = document.querySelector("#results-section")
 
- function parksInfo(value) {
+ let parksInfo = (value) => {
      console.log("my log", value)
      if (value.length === 0) {
          alert("There are no events for this category today!")
