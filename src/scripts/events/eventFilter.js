@@ -12,9 +12,9 @@ function eventInfo(value){
             resultsInj.appendChild(builtEvent)
             resultsInj.appendChild(saveEventButton)
             saveEventButton.classList.add("btn-primary")
-            let buttonId = i
-            saveToDom(buttonId)
+            const buttonId = i
             console.log("button id", buttonId)
+            saveToDom(buttonId)
         }
     }
 }

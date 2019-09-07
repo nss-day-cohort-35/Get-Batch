@@ -19,21 +19,41 @@ getEventButton.addEventListener("click", function() {
 })
 
 // saving selected fetched item into a DOM component adn inserting it into My Itinerary
+let allResults = []
 function saveToDom(itemId){
     let saveToDomButton = document.querySelector(`#resultSaveButton-${itemId}`)
     let eventResult = document.querySelector(`#event-${itemId}`)
-    saveToDomButton.addEventListener("click", () => {
-        console.log("Event", eventResult)
-        makeItinerary(eventResult)
-    })
+    let parkResult = document.querySelector(`#park-${itemId}`)
+    if(eventResult != null){
+        allResults.push(eventResult)
+        saveToDomButton.addEventListener("click", () => {
+            console.log("Event", allResults)
+            makeItinerary(allResults[itemId])})
+    } else if(eventResult != null){
+        allResults.push(parkResult)
+        saveToDomButton.addEventListener("click", () => {
+            console.log("Event", allResults)
+            makeItinerary(allResults)
+        })
+    }
 }
 
-// Function to make elements that will populate the DOM
+// Function to make elements that will populate the DOM with saved itinerary results
 function makeItinerary(item){
-    htmlBuilder.clearContainer(resultsInj)
-    let myItinerary = document.querySelector("#itinerary-section")
-    let builtItem = htmlBuilder.createElementWithText("li", `Event: ${item.textContent}`, "my-event")
-    myItinerary.appendChild(builtItem)
+    console.log("item", item)
+    // for(let i = 0; i < items.length; i++){
+        if(item.classList = "eventSearchResult"){
+            htmlBuilder.clearContainer(resultsInj)
+            let myItinerary = document.querySelector("#itinerary-section")
+            let builtItem = htmlBuilder.createElementWithText("li", `Event: ${item.textContent}`, "my-event")
+            myItinerary.appendChild(builtItem)
+        } else if (item.classList === "parkNameResult"){
+            htmlBuilder.clearContainer(resultsInj)
+            let myItinerary = document.querySelector("#itinerary-section")
+            let builtItem = htmlBuilder.createElementWithText("li", `Park: ${item.park_name}`, "my-park")
+            myItinerary.appendChild(builtItem)
+        // }
+    }
 }
 
 // Event Listener for concerts
