@@ -117,7 +117,7 @@ let buildForm = {
 
 
         //Appending the main body to the display container and then appending corresponding child elements
-        displayContainer.appendChild(mainBody)
+        divWrapper.appendChild(mainBody)
         mainBody.appendChild(h2Wrapper)
         h2Wrapper.appendChild(h2)
         console.log(displayContainer)
