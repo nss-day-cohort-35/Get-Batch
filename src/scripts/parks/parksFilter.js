@@ -10,9 +10,9 @@
              console.log("whats up in the for loop")
              let parkAddress = value[i].mapped_location.human_address;
              let parkName = value[i].park_name;
-             let parkNameE = htmlBuilder.createElementWithText("li", `Park Name| ${parkName}`, `park-${i}`, "parkNameResults")
+             let parkNameE = htmlBuilder.createElementWithText("li", `Park Name ${parkName}`, `park-${i}`, "parkNameResults")
              let parkAddressE = htmlBuilder.createElementWithText("li", `ParkAddress|${parkAddress}`, `park${i}`, "parkAddressResults")
-             let saveParkButton = htmlBuilder.createElementWithText("button", "Save", `park-results-saveButton${i}`, "btn", undefined, "button")
+             let saveParkButton = htmlBuilder.createElementWithText("button", "Save", `park-result-save-button-${i}`, "btn", undefined, "button")
              saveParkButton.classList.add("btn-primary")
              resultsInj.appendChild(parkNameE)
              resultsInj.appendChild(parkAddressE)

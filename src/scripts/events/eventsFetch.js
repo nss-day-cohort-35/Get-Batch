@@ -37,6 +37,5 @@ const getEvents = (value) => {
     .then(parsedEvent => {
         events.push(parsedEvent)
         events.forEach(value => eventInfo(value))
-        console.table("parsedData", parsedEvent)
     })
 }
