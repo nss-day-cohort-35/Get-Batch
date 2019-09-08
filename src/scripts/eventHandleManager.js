@@ -82,14 +82,22 @@ function makeItinerary(item){
         myItinerary.appendChild(builtItem)
     }
 }
-
 // Event Listener for concerts
 
 getParkButton.addEventListener("click", function(){
-    let getOption = selectPark.options[selectPark.selectedIndex].value
+    //getOption is a variable that stores the sele
+alert("Haha too late! ") 
+let getOption = selectPark.options[selectPark.selectedIndex].value
     let searchParks = parksCat(getOption)
     getParks(searchParks)
 
+})
+
+
+getFoodButton.addEventListener("click",function() {
+        let getOption = selectFood.options[selectFood.selectedIndex].value
+        let searchFood = foodCat(getOption)
+        getFood(searchFood)
 })
 
 
