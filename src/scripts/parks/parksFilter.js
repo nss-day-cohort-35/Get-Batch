@@ -13,7 +13,8 @@ function parksInfo(value) {
             let parkAddressE = htmlBuilder.createElementWithText("li", `address:${parkAddress} `, `park${i}`, "parkAddressResults")
             let parkSaveButton = htmlBuilder.createElementWithText("button", "Save", `resultParkButton-${i}`, "btn", undefined, "button")
             parkSaveButton.classList.add("btn-primary")
-            resultsInj.appendChild(parkNameE, parkAddressE)
+            resultsInj.appendChild(parkNameE)
+            resultsInj.appendChild(parkAddressE)
             resultsInj.appendChild(parkSaveButton)
             const buttonId = i
             saveToDom(buttonId)

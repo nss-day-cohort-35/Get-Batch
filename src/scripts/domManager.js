@@ -50,13 +50,12 @@ let buildForm = {
         parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 
         // Creating 4 user input elements
-        foodInput = htmlBuilder.createElementWithText("input", undefined, "food-input", "foodInput", undefined, undefined)
-        parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-select", "parksInput", undefined, undefined)
-        concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "text")
-        eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select", "eventSelect", undefined, undefined)
+        foodInput = htmlBuilder.createElementWithText("input", undefined, "food-input", "select", undefined, undefined)
+        parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-select", "select", undefined, undefined)
+        concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "select", undefined, "text")
+        eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select", "select", undefined, undefined)
 
         // Creating footer element containing a div, ul, 4 li and 4 anchor tags
-
         footer = htmlBuilder.createElementWithText("footer", undefined, "footer-element", "footerElement")
         linkWrapper = htmlBuilder.createElementWithText("div", "link-wrapper", )
         ul = htmlBuilder.createElementWithText("ul")
@@ -72,12 +71,12 @@ let buildForm = {
         // Creating options for events select element
 
         // eventSelect.setAttribute = "selected,selected"
-        eventSelect = htmlBuilder.createElementWithText("option", "Select Event Type", undefined, undefined, "Select Event Type")
-        eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", undefined, undefined, "Food_and_Drink")
-        eventSelect2 = htmlBuilder.createElementWithText("option", "Family Friendly", undefined, undefined, "Family")
-        eventSelect3 = htmlBuilder.createElementWithText("option", "Hobbies", undefined, undefined, "Hobbies")
-        eventSelect4 = htmlBuilder.createElementWithText("option", "Sports", undefined, undefined, "Sports")
-        eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", undefined, undefined, "Arts")
+        eventSelect = htmlBuilder.createElementWithText("option", "Select Event Type", "eventSelect", undefined, "Select Event Type")
+        eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", "eventSelect", undefined, "Food_and_Drink")
+        eventSelect2 = htmlBuilder.createElementWithText("option", "Family Friendly", "eventSelect", undefined, "Family")
+        eventSelect3 = htmlBuilder.createElementWithText("option", "Hobbies", "eventSelect", undefined, "Hobbies")
+        eventSelect4 = htmlBuilder.createElementWithText("option", "Sports", "eventSelect", undefined, "Sports")
+        eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", "eventSelect", undefined, "Arts")
 
         //Creating options element for the park selections
         parkSelect1 = htmlBuilder.createElementWithText("option", "VolleyBall", undefined, undefined, "volleyball")
@@ -101,16 +100,16 @@ let buildForm = {
         parkButton.classList.add("btn-primary")
         concertButton.classList.add("btn-primary")
         foodButton.classList.add("btn-primary")
+        
+        // added styling to the dropdown menu
+        // eventsInput.classList.add("dropdown")
+        // parksInput.classList.add("dropdown")
 
         //Input placeholders
         foodInput.placeholder = "search by food type"
         parksInput.placeholder = "parks by feature"
         concertsInput.placeholder = "concerts input"
         eventsInput.placeholder = "search events"
-
-
-
-
 
         //Appending the div wrapper, header and h1 one to display container then console.logging the results
         displayContainer.appendChild(divWrapper)

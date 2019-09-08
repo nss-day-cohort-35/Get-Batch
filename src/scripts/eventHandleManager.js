@@ -67,14 +67,16 @@ function makeItinerary(item){
         if(item.classList = "eventSearchResult"){
             let myItinerary = document.querySelector("#itinerary-event-div")
             htmlBuilder.clearContainer(resultsInj)
-            let builtItem = htmlBuilder.createElementWithText("li", `Event: ${item.textContent}`, "my-event")
+            let builtItem = htmlBuilder.createElementWithText("li", ` ${item.textContent}`, "my-event")
             myItinerary.appendChild(builtItem)
         } else if (item.classList === "parkNameResult"){
             let myItinerary = document.querySelector("#itinerary-park-div")
             htmlBuilder.clearContainer(resultsInj)
             // let myItinerary = document.querySelector("#itinerary-section")
-            let builtItem = htmlBuilder.createElementWithText("li", `Park: ${item.park_name}`, "my-park")
-            myItinerary.appendChild(builtItem)
+            let builtParkItem = htmlBuilder.createElementWithText("li", `Park: ${item.park_name}`, "my-park")
+            let parkAddressE = htmlBuilder.createElementWithText("li", `Address:${parkAddress} `, `park${i}`, "parkAddressResults")
+            myItinerary.appendChild(builtParkItem)
+            myItinerary.appendChild(parkAddressE)
         } else if(item.classList === "concertNameResult"){
             let myItinerary = document.querySelector("#itinerary-conert-div")
         htmlBuilder.clearContainer(resultsInj)
