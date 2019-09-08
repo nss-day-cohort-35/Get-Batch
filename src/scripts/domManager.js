@@ -49,7 +49,6 @@ let buildForm = {
         eventsFieldSet = htmlBuilder.createElementWithText("fieldset")
         parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 
-        A
         // Creating 4 user input elements
         foodInput = htmlBuilder.createElementWithText("select", undefined, "food-select", "foodInput", undefined, undefined)
         parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-select", "parksInput", undefined, undefined)

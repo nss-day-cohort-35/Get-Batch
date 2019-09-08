@@ -34,7 +34,7 @@ function saveToDom(itemId){
     // querying search result buttons for info to be placed into itinerary
     let saveToDomEventButton = document.querySelector(`#resultEventButton-${itemId}`)
     let saveToDomConcertButton = document.querySelector(`#resultConcertButton-${itemId}`)
-    let saveToDomParkButton = document.querySelector(`#resultParkButton-${itemId}`)
+    let saveToDomParkButton = document.querySelector(`#park-result-save-button-${itemId}`)
     let saveToDomFoodButton = document.querySelector(`#resultFoodButton-${itemId}`)
 
     let eventResult = document.querySelector(`#event-${itemId}`)
