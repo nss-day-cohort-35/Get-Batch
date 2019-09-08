@@ -48,7 +48,7 @@ let buildForm = {
         // Creating 4 user input elements
         foodInput = htmlBuilder.createElementWithText("input", undefined, "food-input", "foodInput", undefined, undefined)
         parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-select", "parksInput", undefined, undefined)
-        concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "date")
+        concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "text")
         eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select", "eventSelect", undefined, undefined)
 
         // Creating footer element containing a div, ul, 4 li and 4 anchor tags
