@@ -11,7 +11,7 @@ function parksInfo(value) {
             let parkName = value[i].park_name;
             let parkNameE = htmlBuilder.createElementWithText("li", `name: ${parkName}`, `park-${i}`, "parkNameResults")
             let parkAddressE = htmlBuilder.createElementWithText("li", `address:${parkAddress} `, `park${i}`, "parkAddressResults")
-            let parkSaveButton = htmlBuilder.createElementWithText("button", "Save", `resultSaveButton-${i}`, "btn", undefined, "button")
+            let parkSaveButton = htmlBuilder.createElementWithText("button", "Save", `resultParkButton-${i}`, "btn", undefined, "button")
             parkSaveButton.classList.add("btn-primary")
             resultsInj.appendChild(parkNameE, parkAddressE)
             resultsInj.appendChild(parkSaveButton)

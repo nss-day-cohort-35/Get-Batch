@@ -8,7 +8,7 @@ function eventInfo(value){
         for(let i = 0; i < 5 && i < value.length; i++){
             let name = value[i].name.text;
             let builtEvent = htmlBuilder.createElementWithText("li", `${name}`, `event-${i}`, "eventSearchResults")
-            let saveEventButton = htmlBuilder.createElementWithText("button", "Save", `resultSaveButton-${i}`, "btn", undefined, "button")
+            let saveEventButton = htmlBuilder.createElementWithText("button", "Save", `resultEventButton-${i}`, "btn", undefined, "button")
             resultsInj.appendChild(builtEvent)
             resultsInj.appendChild(saveEventButton)
             saveEventButton.classList.add("btn-primary")
