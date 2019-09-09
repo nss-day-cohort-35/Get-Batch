@@ -14,7 +14,6 @@ function eventInfo(value){
             resultsInj.appendChild(saveEventButton)
             saveEventButton.classList.add("btn-outline-warning")
             const buttonId = i
-            console.log("button id", buttonId)
             saveToDom(buttonId)
         }
     }

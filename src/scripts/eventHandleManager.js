@@ -16,7 +16,6 @@ getEventButton.addEventListener("click", function() {
     let getOption = selectEvent.options[selectEvent.selectedIndex].value
     let searchEvents = eventCatNum(getOption)
     getEvents(searchEvents)
-    console.log("gottem")
 })
 
 // adding event listener to concert search
@@ -62,7 +61,6 @@ function saveToDom(itemId){
 
 // Function to make elements that will populate the DOM with saved itinerary results
 function makeItinerary(item){
-    console.log("item", item)
     // for(let i = 0; i < items.length; i++){
         if(item.classList = "eventSearchResultsArr"){
             let myItinerary = document.querySelector("#itinerary-event-div")
@@ -84,14 +82,22 @@ function makeItinerary(item){
         myItinerary.appendChild(builtItem)
     }
 }
-
 // Event Listener for concerts
 
 getParkButton.addEventListener("click", function(){
-    let getOption = selectPark.options[selectPark.selectedIndex].value
+    //getOption is a variable that stores the sele
+alert("Haha too late! ") 
+let getOption = selectPark.options[selectPark.selectedIndex].value
     let searchParks = parksCat(getOption)
     getParks(searchParks)
 
+})
+
+
+getFoodButton.addEventListener("click",function() {
+        let getOption = selectFood.options[selectFood.selectedIndex].value
+        let searchFood = foodCat(getOption)
+        getFood(searchFood)
 })
 
 

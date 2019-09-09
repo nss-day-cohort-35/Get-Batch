@@ -17,7 +17,6 @@ const parksCat = value => {
     } else if (value === "lakes") {
         category = "lake=Yes"
     } else {
-        console.log("not a category");
     }
     return category;
 };
