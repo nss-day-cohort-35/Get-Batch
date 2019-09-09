@@ -134,7 +134,7 @@ let buildForm = {
         //Appending fieldsets to form and then appending inputs to the fieldsets
         form.appendChild(foodFieldSet).appendChild(foodInput)
         form.appendChild(concertFieldSet).appendChild(concertsInput)
-        form.appendChild(eventsFieldSet).appendChild(eventsInput).appendChild(eventSelect1)
+        form.appendChild(eventsFieldSet).appendChild(eventsInput)
         form.appendChild(parksFieldSet).appendChild(parksInput)
 
         //Appending event options to eventSelect element
@@ -173,6 +173,13 @@ let buildForm = {
         itinerarySection.appendChild(itineraryParkDiv) 
         itinerarySection.appendChild(itineraryFoodDiv) 
         itinerarySection.appendChild(itineraryConcertDiv) 
+
+        // Adding classes to style using bootstrap
+        eventsInput.classList.add("custom-select")
+        parksInput.classList.add("custom-select")
+        foodInput.classList.add("custom-select")
+
+        resultsSection.classList.add("card")
     }
 
 }

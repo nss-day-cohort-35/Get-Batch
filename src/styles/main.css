@@ -1,8 +1,21 @@
+
 .btn {
     margin: 2px;
-    padding: 2px
+    padding: 2px;
+    width: 50%;
+    
 }
 
-.select {
+main {
+    display: flex;
 }
 
+#event-select, #parks-select, #food-input, #concert-input {
+    width: 50%;
+    height: auto;
+}
+
+body {
+    background-color: #F2B3C4;
+    border: solid 2px;
+}
