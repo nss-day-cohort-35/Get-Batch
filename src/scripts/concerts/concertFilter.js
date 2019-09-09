@@ -8,7 +8,7 @@ function concertInfo(value){
             console.log("value", value._embedded.events[0].name)
             let name = value._embedded.events[i].name;
             let builtEvent = htmlBuilder.createElementWithText("li", `${name}`, `concert-${i}`, "concertSearchResults")
-            let saveConcertButton = htmlBuilder.createElementWithText("button", "Save", `resultConcertButton-${i}`, "btn", undefined, "button")
+            let saveConcertButton = htmlBuilder.createElementWithText("button", "Save", `result-concert-button${i}`, "btn", undefined, "button")
             resultsInj.appendChild(builtEvent)
             resultsInj.appendChild(saveConcertButton)
             saveConcertButton.classList.add("btn-primary")

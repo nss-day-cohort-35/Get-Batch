@@ -1,44 +1,43 @@
-const foodCat = value => {
-    let category = "";
-    if (value === "greek") {
-        category = "greek";
-    } else if (value === "tex-mex") {
-        category = "tex-mex";
-    } else if (value === "golfCourse") {
-        category = "golf_course=Yes";
-    } else if (value === "basketballCourts") {
-        category = "basketball_courts=Yes";
-    } else if (value === "footballFields") {
-        category = "football_multi_purpose_fields=Yes";
-    } else if (value === "dogParks") {
-        category = "dog_park=Yes";
-    } else if (value === "natureCenters") {
-        category = "nature_center=Yes";
-    } else if (value === "lakes") {
-        category = "lake=Yes"
-    } else {
-        console.log("not a category");
-    }
-    return category;
-};
+// const foodCat = value => {
+//     let category = "";
+//     console.log(value)
+//     if (value === "Greek") {
+//         category = "Greek";
+//     } else if (value === "Tex-Mex") {
+//         category = "Tex-Mex";
+//     } else if (value === "Burger") {
+//         category = "Burger";
+//     } else if (value === "American, Diner, Sandwich") {
+//         category = "American, Diner, Sandwich";
+//     } else if (value === "Diner, Southern") {
+//         category = "Diner, Southern";
+//     } else if (value === "American, Steak") {
+//         category = "American, Steak";
+//     } else if (value === "BBQ, Burger, Southern") {
+//         category = "BBQ, Burger, Southern";
+//     } else if (value === "Seafood, Sushi") {
+//         category = "Seafood, Sushi"
+//     } else {
+//         console.log("not a category");
+//     }
+//     return category;
+// };
 
-
-const getfood = (foodsValue) => {
-    fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&cuisine=${foodsValue}`, {
+let foodArray = []
+const getFood = (foodsValue) => {
+    fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&q=${foodsValue}`, {
             headers: {
                 "user-key": "fc39be8a8b64fd8520e5e401b0981f2d"
             }
         })
         .then(foodData => foodData.json())
+        .then(parsedFood => parsedFood.restaurants)
         .then(parsedFood => {
+            foodArray.push(parsedFood)
+            foodArray.forEach(item => {
+                foodInfo(item)
+                console.log(item)
 
-            console.log(parsedFood)
-            foodInfo(parsedFood)
+            })
         })
-
 }
-getfood()
-
-
-
-

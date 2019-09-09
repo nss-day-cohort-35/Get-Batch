@@ -50,7 +50,7 @@ let buildForm = {
         parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 
         // Creating 4 user input elements
-        foodInput = htmlBuilder.createElementWithText("select", undefined, "food-select", "foodInput", undefined, undefined)
+        foodInput = htmlBuilder.createElementWithText("input", undefined, "food-select", "foodInput", undefined, undefined)
         parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-select", "parksInput", undefined, undefined)
         concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "text")
         eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select", "eventSelect", undefined, undefined)
@@ -80,6 +80,7 @@ let buildForm = {
         eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", undefined, undefined, "Arts")
 
         //Creating options element for the park selections
+        parkSelect = htmlBuilder.createElementWithText("option", "Select Park by Feature", undefined, undefined, "Select Food Type")
         parkSelect1 = htmlBuilder.createElementWithText("option", "VolleyBall", undefined, undefined, "volleyball")
         parkSelect2 = htmlBuilder.createElementWithText("option", "Baseball Fields", undefined, undefined, "baseballFields")
         parkSelect3 = htmlBuilder.createElementWithText("option", "Basketball Courts", undefined, undefined, "basketballCourts")
@@ -89,23 +90,24 @@ let buildForm = {
         parkSelect7 = htmlBuilder.createElementWithText("option", "Nature Center", undefined, undefined, "natureCenters")
         parkSelect8 = htmlBuilder.createElementWithText("option", "Parks including lakes", undefined, undefined, "lakes")
 
-        // //Creating options element for the food selections
-        // foodSelect1 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect2 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect3 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect4 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect5 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect6 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect7 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect8 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
+        //Creating options element for the food selections
+        // foodSelect = htmlBuilder.createElementWithText("option", "Select Food by Cuisine Type", undefined, undefined, "Select Food Type")
+        // foodSelect1 = htmlBuilder.createElementWithText("option", "Greek Food", undefined, undefined, "Greek")
+        // foodSelect2 = htmlBuilder.createElementWithText("option", "Burger Joints", undefined, undefined, "Burger")
+        // foodSelect3 = htmlBuilder.createElementWithText("option", "American Diners", undefined, undefined, "American, Diner, Sandwich")
+        // foodSelect4 = htmlBuilder.createElementWithText("option", "Southern", undefined, undefined, "Diner, Southern")
+        // foodSelect5 = htmlBuilder.createElementWithText("option", "Steak", undefined, undefined, "American, Steak")
+        // foodSelect6 = htmlBuilder.createElementWithText("option", "BBQ", undefined, undefined, "BBQ, Burger, Southern")
+        // foodSelect7 = htmlBuilder.createElementWithText("option", "Sushi", undefined, undefined, "Seafood, Sushi")
+        // foodSelect8 = htmlBuilder.createElementWithText("option", "Tex-Mex", undefined, undefined, "tex-mex")
 
 
         // Creating button for fieldset
-         eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
-         parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
-         concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
-         foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
-        
+        eventButton = htmlBuilder.createElementWithText("button", "Search", "event-button", "btn", undefined, "button")
+        parkButton = htmlBuilder.createElementWithText("button", "Search", "park-button", "btn", undefined, "button")
+        concertButton = htmlBuilder.createElementWithText("button", "Search", "concert-button", "btn", undefined, "button")
+        foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
+
         //added classes to buttons for styling
         eventButton.classList.add("btn-primary")
         parkButton.classList.add("btn-primary")
@@ -145,7 +147,7 @@ let buildForm = {
         //Appending fieldsets to form and then appending inputs to the fieldsets
         form.appendChild(foodFieldSet).appendChild(foodInput)
         form.appendChild(concertFieldSet).appendChild(concertsInput)
-        form.appendChild(eventsFieldSet).appendChild(eventsInput).appendChild(eventSelect1)
+        form.appendChild(eventsFieldSet).appendChild(eventsInput)
         form.appendChild(parksFieldSet).appendChild(parksInput)
 
         //Appending event options to eventSelect element
@@ -157,6 +159,7 @@ let buildForm = {
         eventsInput.appendChild(eventSelect5)
 
         //Appending parks options to parkSelect element
+        parksInput.appendChild(parkSelect)
         parksInput.appendChild(parkSelect1)
         parksInput.appendChild(parkSelect2)
         parksInput.appendChild(parkSelect3)
@@ -168,7 +171,7 @@ let buildForm = {
 
 
         //Appending food options to foodSelect element
-
+        // foodInput.appendChild(foodSelect)
         // foodInput.appendChild(foodSelect1)
         // foodInput.appendChild(foodSelect2)
         // foodInput.appendChild(foodSelect3)
@@ -191,11 +194,11 @@ let buildForm = {
         secondArticle.appendChild(resultsSection)
         secondArticle.appendChild(itineraryWrapper)
         secondArticle.appendChild(itinerarySection)
-        itinerarySection.appendChild(itineraryH2) 
-        itinerarySection.appendChild(itineraryEventDiv) 
-        itinerarySection.appendChild(itineraryParkDiv) 
-        itinerarySection.appendChild(itineraryFoodDiv) 
-        itinerarySection.appendChild(itineraryConcertDiv) 
+        itinerarySection.appendChild(itineraryH2)
+        itinerarySection.appendChild(itineraryEventDiv)
+        itinerarySection.appendChild(itineraryParkDiv)
+        itinerarySection.appendChild(itineraryFoodDiv)
+        itinerarySection.appendChild(itineraryConcertDiv)
     }
 
 }
