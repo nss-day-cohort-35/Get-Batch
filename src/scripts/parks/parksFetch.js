@@ -32,4 +32,5 @@ const getParks = value => {
             .then(parksData => parksData.json())
             .then(parsedParks => {
                 parksInfo(parsedParks)
+                console.log(parsedParks)
             })}
