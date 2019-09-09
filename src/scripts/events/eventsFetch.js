@@ -19,7 +19,6 @@ const eventCatNum = (value) => {
     } else if (value === "Family"){
         category = family;
     } else {
-        console.log("not a category");
     }
     return category
 }
