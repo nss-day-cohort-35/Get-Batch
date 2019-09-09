@@ -26,36 +26,36 @@ getConcertButton.addEventListener("click", function() {
 })
 
 // saving selected fetched item into a DOM component adn inserting it into My Itinerary
-let eventResults = []
-let foodResults = []
-let parkResults = []
-let concertResults = []
+let eventResultsArr = []
+let foodResultsArr = []
+let parkResultsArr = []
+let concertResultsArr = []
 function saveToDom(itemId){
     // querying search result buttons for info to be placed into itinerary
-    let saveToDomEventButton = document.querySelector(`#resultEventButton-${itemId}`)
-    let saveToDomConcertButton = document.querySelector(`#resultConcertButton-${itemId}`)
-    let saveToDomParkButton = document.querySelector(`#resultParkButton-${itemId}`)
-    let saveToDomFoodButton = document.querySelector(`#resultFoodButton-${itemId}`)
+    let saveToDomEventButton = document.querySelector(`#result-event-button${itemId}`)
+    let saveToDomConcertButton = document.querySelector(`#result-concert-button${itemId}`)
+    let saveToDomParkButton = document.querySelector(`#result-park-button${itemId}`)
+    let saveToDomFoodButton = document.querySelector(`#result-food-button${itemId}`)
 
     let eventResult = document.querySelector(`#event-${itemId}`)
     let parkResult = document.querySelector(`#park-${itemId}`)
     let concertResult = document.querySelector(`#concert-${itemId}`)
     if(eventResult != null){
-        eventResults.push(eventResult)
+        eventResultsArr.push(eventResult)
         saveToDomEventButton.addEventListener("click", () => {
-            console.log("Event", eventResults)
-            makeItinerary(eventResults[itemId])
+            console.log("Event", eventResultsArr)
+            makeItinerary(eventResultsArr[itemId])
         })
     } else if(parkResult != null){
-        parkResults.push(parkResult)
+        parkResultsArr.push(parkResult)
         saveToDomParkButton.addEventListener("click", () => {
-            console.log("Park", parkResults)
-            makeItinerary(parkResults[itemId])
+            console.log("Park", parkResultsArr)
+            makeItinerary(parkResultsArr[itemId])
         })
     } else if(concertResult != null){
-        concertResults.push(concertResult)
+        concertResultsArr.push(concertResult)
         saveToDomConcertButton.addEventListener("click", () => {
-            makeItinerary(concertResults[itemId])
+            makeItinerary(concertResultsArr[itemId])
         })
     }
 }
@@ -64,23 +64,23 @@ function saveToDom(itemId){
 function makeItinerary(item){
     console.log("item", item)
     // for(let i = 0; i < items.length; i++){
-        if(item.classList = "eventSearchResult"){
+        if(item.classList = "eventSearchResultsArr"){
             let myItinerary = document.querySelector("#itinerary-event-div")
             htmlBuilder.clearContainer(resultsInj)
-            let builtItem = htmlBuilder.createElementWithText("li", ` ${item.textContent}`, "my-event")
+            let builtItem = htmlBuilder.createElementWithText("li", `${item.textContent}`, "my-event", undefined, undefined, "none")
             myItinerary.appendChild(builtItem)
-        } else if (item.classList === "parkNameResult"){
+        } else if (item.classList === "parkNameResultsArr"){
             let myItinerary = document.querySelector("#itinerary-park-div")
             htmlBuilder.clearContainer(resultsInj)
             // let myItinerary = document.querySelector("#itinerary-section")
-            let builtParkItem = htmlBuilder.createElementWithText("li", `Park: ${item.park_name}`, "my-park")
-            let parkAddressE = htmlBuilder.createElementWithText("li", `Address:${parkAddress} `, `park${i}`, "parkAddressResults")
+            let builtParkItem = htmlBuilder.createElementWithText("li", `Park: ${item.park_name}`, "my-park", undefined, undefined, "none")
+            let parkAddressE = htmlBuilder.createElementWithText("li", `Address:${parkAddress} `, `park${i}`, "parkAddressResults", undefined, "none")
             myItinerary.appendChild(builtParkItem)
             myItinerary.appendChild(parkAddressE)
-        } else if(item.classList === "concertNameResult"){
+        } else if(item.classList === "concertNameResultsArr"){
             let myItinerary = document.querySelector("#itinerary-conert-div")
         htmlBuilder.clearContainer(resultsInj)
-        let builtItem = htmlBuilder.createElementWithText("li", `Concert: ${item.name}`, "my-concert")
+        let builtItem = htmlBuilder.createElementWithText("li", `Concert: ${item.name}`, "my-concert", undefined, undefined, "none")
         myItinerary.appendChild(builtItem)
     }
 }

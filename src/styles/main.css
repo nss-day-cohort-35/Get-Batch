@@ -3,6 +3,7 @@
     margin: 2px;
     padding: 2px;
     width: 50%;
+    align-content: center;
     
 }
 
@@ -10,12 +11,54 @@ main {
     display: flex;
 }
 
-#event-select, #parks-select, #food-input, #concert-input {
-    width: 50%;
-    height: auto;
+.article1{
+    display: flex;
+    justify-content: center;
+/*     border: outset pink; */
+
 }
 
-body {
-    background-color: #F2B3C4;
-    border: solid 2px;
+
+    
+form{
+    width: 50%;
+    border: outset pink 15px;
+    margin: 10px;
+}
+
+
+
+#event-select, #parks-select, #food-input, #concert-input {
+/*     width: 50%; */
+    height: auto;
+    border: solid 2px goldenrod;
+    background-color: #261008;
+    color: pink;
+}
+
+.secondArticle {
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: column; */
+}
+
+
+.itinerarySection {
+    border: outset goldenrod 4px;
+    padding: 3px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* .resultSection {
+    border: solid 2px pink;
+    width: 50%;
+    height: 100px;
+} */
+
+.bodyTag {
+    background-color: #261008;
+    color: #F2B3C4
 }

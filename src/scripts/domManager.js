@@ -26,8 +26,8 @@ let buildForm = {
         //Creating 1st & 2nd articles. The first article will hold the form containing fieldsets and user inputs 
         // The second article will contain the results and itinerary sections.
 
-        secondArticle = htmlBuilder.createElementWithText("article", )
-        resultsSection = htmlBuilder.createElementWithText("section", undefined, "results-section")
+        secondArticle = htmlBuilder.createElementWithText("article", undefined, undefined, "secondArticle" )
+        resultsSection = htmlBuilder.createElementWithText("section", undefined, "results-section", "resultSection")
         resultsH2Wrapper = htmlBuilder.createElementWithText("div", undefined, "results-h2-wrapper", "resultsH2Wrapper", undefined, undefined)
         resultsH2 = htmlBuilder.createElementWithText("h2", "Results", "results-h2", "resultsH2", undefined, undefined)
 
@@ -43,7 +43,7 @@ let buildForm = {
         form = htmlBuilder.createElementWithText("form")
 
         // Creating fieldset variables
-        firstArticle = htmlBuilder.createElementWithText("article")
+        firstArticle = htmlBuilder.createElementWithText("article", undefined, undefined, "article1")
         foodFieldSet = htmlBuilder.createElementWithText("fieldset")
         concertFieldSet = htmlBuilder.createElementWithText("fieldset")
         eventsFieldSet = htmlBuilder.createElementWithText("fieldset")
@@ -96,10 +96,10 @@ let buildForm = {
          foodButton = htmlBuilder.createElementWithText("button", "Search", "food-button", "btn", undefined, "button")
         
         //added classes to buttons for styling
-        eventButton.classList.add("btn-primary")
-        parkButton.classList.add("btn-primary")
-        concertButton.classList.add("btn-primary")
-        foodButton.classList.add("btn-primary")
+        eventButton.classList.add("btn-outline-warning")
+        parkButton.classList.add("btn-outline-warning")
+        concertButton.classList.add("btn-outline-warning")
+        foodButton.classList.add("btn-outline-warning")
         
         // added styling to the dropdown menu
         // eventsInput.classList.add("dropdown")
@@ -178,8 +178,6 @@ let buildForm = {
         eventsInput.classList.add("custom-select")
         parksInput.classList.add("custom-select")
         foodInput.classList.add("custom-select")
-
-        resultsSection.classList.add("card")
     }
 
 }
