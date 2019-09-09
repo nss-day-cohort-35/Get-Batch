@@ -13,7 +13,6 @@ let buildForm = {
     invokeBuildForm: () => {
         //Creating a div wrapper  
         divWrapper = htmlBuilder.createElementWithText("div", undefined, "div-wrapper", "wrapper")
-        console.log(divWrapper)
         mainHeader = htmlBuilder.createElementWithText("header", undefined, "main-header", "header", undefined, undefined)
         h1Wrapper = htmlBuilder.createElementWithText("div", undefined, "h1-wrapper", "h1Wrapper", undefined, undefined)
         h1 = htmlBuilder.createElementWithText("h1", "Welcome To Nashville", "H-One", undefined, undefined, undefined)
@@ -127,14 +126,12 @@ let buildForm = {
         divWrapper.appendChild(mainHeader)
         mainHeader.append(h1Wrapper)
         h1Wrapper.appendChild(h1)
-        console.log(displayContainer)
 
 
         //Appending the main body to the display container and then appending corresponding child elements
         divWrapper.appendChild(mainBody)
         mainBody.appendChild(h2Wrapper)
         h2Wrapper.appendChild(h2)
-        console.log(displayContainer)
 
 
         //Appending articles to the main element

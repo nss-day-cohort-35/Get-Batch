@@ -16,7 +16,6 @@ getEventButton.addEventListener("click", function() {
     let getOption = selectEvent.options[selectEvent.selectedIndex].value
     let searchEvents = eventCatNum(getOption)
     getEvents(searchEvents)
-    console.log("gottem")
 })
 
 // adding event listener to concert search
@@ -43,13 +42,11 @@ function saveToDom(itemId){
     if(eventResult != null){
         eventResults.push(eventResult)
         saveToDomEventButton.addEventListener("click", () => {
-            console.log("Event", eventResults)
             makeItinerary(eventResults[itemId])
         })
     } else if(parkResult != null){
         parkResults.push(parkResult)
         saveToDomParkButton.addEventListener("click", () => {
-            console.log("Park", parkResults)
             makeItinerary(parkResults[itemId])
         })
     } else if(concertResult != null){
@@ -62,12 +59,11 @@ function saveToDom(itemId){
 
 // Function to make elements that will populate the DOM with saved itinerary results
 function makeItinerary(item){
-    console.log("item", item)
     // for(let i = 0; i < items.length; i++){
         if(item.classList = "eventSearchResult"){
             let myItinerary = document.querySelector("#itinerary-event-div")
             htmlBuilder.clearContainer(resultsInj)
-            let builtItem = htmlBuilder.createElementWithText("li", `Event: ${item.textContent}`, "my-event")
+            let builtItem = htmlBuilder.createElementWithText("li", `${item.textContent}`, "my-event")
             myItinerary.appendChild(builtItem)
         } else if (item.classList === "parkNameResult"){
             let myItinerary = document.querySelector("#itinerary-park-div")
