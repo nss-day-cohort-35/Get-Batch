@@ -197,6 +197,7 @@ let buildForm = {
         eventsInput.classList.add("custom-select")
         parksInput.classList.add("custom-select")
         foodInput.classList.add("custom-select")
+        concertsInput.classList.add("form-control")
     }
 
 }
