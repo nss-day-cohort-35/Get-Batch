@@ -15,7 +15,7 @@ let buildForm = {
         divWrapper = htmlBuilder.createElementWithText("div", undefined, "div-wrapper", "wrapper")
         mainHeader = htmlBuilder.createElementWithText("header", undefined, "main-header", "header", undefined, undefined)
         h1Wrapper = htmlBuilder.createElementWithText("div", undefined, "h1-wrapper", "h1Wrapper", undefined, undefined)
-        h1 = htmlBuilder.createElementWithText("h1", "Welcome To Nashville", "H-One", undefined, undefined, undefined)
+        h1 = htmlBuilder.createElementWithText("h1", "🥂 Welcome Batch's 🍻", "H-One", undefined, undefined, undefined)
 
         //main body variable which contains the main content
         mainBody = htmlBuilder.createElementWithText("main", undefined, "main-body", "mainBody", undefined, undefined)
@@ -139,8 +139,8 @@ let buildForm = {
         firstArticle.appendChild(form)
 
         //Appending fieldsets to form and then appending inputs to the fieldsets
-        form.appendChild(foodFieldSet).appendChild(foodInput)
         form.appendChild(concertFieldSet).appendChild(concertsInput)
+        form.appendChild(foodFieldSet).appendChild(foodInput)
         form.appendChild(eventsFieldSet).appendChild(eventsInput)
         form.appendChild(parksFieldSet).appendChild(parksInput)
 

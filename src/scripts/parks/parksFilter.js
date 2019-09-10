@@ -9,8 +9,8 @@ function parksInfo(value) {
             console.log("whats up in the for loop")
             let parkAddress = value[i].mapped_location.human_address;
             let parkName = value[i].park_name;
-            let parkNameE = htmlBuilder.createElementWithText("li", `name: ${parkName}`, `park-${i}`, "parkNameResults")
-            let parkAddressE = htmlBuilder.createElementWithText("li", `address:${parkAddress} `, `park-address-${i}`, "parkAddressResults")
+            let parkNameE = htmlBuilder.createElementWithText("li", `Name: ${parkName}`, `park-${i}`, "parkNameResults")
+            let parkAddressE = htmlBuilder.createElementWithText("li", `Address:${parkAddress} `, `park-address-${i}`, "parkAddressResults")
             let parkSaveButton = htmlBuilder.createElementWithText("button", "Save", `result-park-button${i}`, "btn", undefined, "button")
             parkSaveButton.classList.add("btn-primary")
             resultsInj.appendChild(parkNameE)
