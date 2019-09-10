@@ -63,20 +63,20 @@ function makeItinerary(item){
         if(item.classList = "eventSearchResultsArr"){
             let myItinerary = document.querySelector("#itinerary-event-div")
             htmlBuilder.clearContainer(resultsInj)
-            let builtItem = htmlBuilder.createElementWithText("li", `${item.textContent}`, "my-event", undefined, undefined)
+            let builtItem = htmlBuilder.createElementWithText("li", `${item.textContent}`, "my-event", undefined, undefined, "none")
             myItinerary.appendChild(builtItem)
         } else if (item.classList === "parkNameResultsArr"){
             let myItinerary = document.querySelector("#itinerary-park-div")
             htmlBuilder.clearContainer(resultsInj)
             // let myItinerary = document.querySelector("#itinerary-section")
-            let builtParkItem = htmlBuilder.createElementWithText("li", `Park: ${item.park_name}`, "my-park", undefined, undefined)
+            let builtParkItem = htmlBuilder.createElementWithText("li", `🍸: ${item.park_name}`, "my-park", undefined, undefined, "none")
             let parkAddressE = htmlBuilder.createElementWithText("li", `Address:${parkAddress} `, `park${i}`, "parkAddressResults", undefined)
             myItinerary.appendChild(builtParkItem)
             myItinerary.appendChild(parkAddressE)
         } else if(item.classList === "concertNameResultsArr"){
             let myItinerary = document.querySelector("#itinerary-conert-div")
         htmlBuilder.clearContainer(resultsInj)
-        let builtItem = htmlBuilder.createElementWithText("li", `Concert: ${item.name}`, "my-concert", undefined, undefined)
+        let builtItem = htmlBuilder.createElementWithText("li", `🍷: ${item.name}`, "my-concert", undefined, undefined, "none")
         myItinerary.appendChild(builtItem)
     }
 }

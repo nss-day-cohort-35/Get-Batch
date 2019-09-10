@@ -11,10 +11,10 @@
 h1{
     background-image: url(https://cdn.pixabay.com/photo/2018/05/23/11/21/abstract-3423816__480.jpg);
     border: outset goldenrod 3px;
-    text-shadow: -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000 
+    text-shadow: -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000 
 }
 
 .h2Search{
@@ -22,6 +22,10 @@ h1{
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000 
+}
+
+.resultsH2Wrapper {
+    width: 20%;
 }
 
 main {
@@ -54,6 +58,14 @@ form{
     color: pink;
 }
 
+::placeholder {
+    color: pink;
+}
+
+input{
+    width: 100%;
+}
+
 /* spacing out the two sections in the second article */
 .secondArticle {
     display: flex;
@@ -68,6 +80,8 @@ form{
     background-color: gray;
     width: 40%;
     margin-bottom: 10px;
+    background-image: linear-gradient(pink,purple);
+    color: black;
 }
 
 /* aligning text */
@@ -85,15 +99,16 @@ h1, h2 {
     border: outset goldenrod 4px;
     padding: 3px;
     background-color: gray;
+    background-image: linear-gradient(pink,purple);
 }
 
 /* adding border and background color to the results section */
 .resultSection {
     border: inset goldenrod 4px;
     padding: 3px;
-    background-color: gray;
+    background-image: linear-gradient(pink,purple);
+    color: black;
     width: 40%;
-    height: 10em;
     margin-bottom: 10px;
 }
 

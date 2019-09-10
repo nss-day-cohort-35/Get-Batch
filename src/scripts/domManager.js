@@ -15,12 +15,12 @@ let buildForm = {
         divWrapper = htmlBuilder.createElementWithText("div", undefined, "div-wrapper", "wrapper")
         mainHeader = htmlBuilder.createElementWithText("header", undefined, "main-header", "header", undefined, undefined)
         h1Wrapper = htmlBuilder.createElementWithText("div", undefined, "h1-wrapper", "h1Wrapper", undefined, undefined)
-        h1 = htmlBuilder.createElementWithText("h1", "🥂 Welcome Batch's 🍻", "H-One", undefined, undefined, undefined)
+        h1 = htmlBuilder.createElementWithText("h1", "🥂 Welcome Batch's 🍆💋", "H-One", undefined, undefined, undefined)
 
         //main body variable which contains the main content
         mainBody = htmlBuilder.createElementWithText("main", undefined, "main-body", "mainBody", undefined, undefined)
         h2Wrapper = htmlBuilder.createElementWithText("div", undefined, "h2-wrapper", "h2Wrapper", undefined, undefined)
-        h2 = htmlBuilder.createElementWithText("h2", "Search", "h2-search", "h2Search", undefined, undefined)
+        h2 = htmlBuilder.createElementWithText("h2", "Aint no laws, while drinking the Claws!", "h2-search", "h2Search", undefined, undefined)
 
         //Creating 1st & 2nd articles. The first article will hold the form containing fieldsets and user inputs 
         // The second article will contain the results and itinerary sections.
@@ -28,7 +28,7 @@ let buildForm = {
         secondArticle = htmlBuilder.createElementWithText("article", undefined, undefined, "secondArticle" )
         resultsSection = htmlBuilder.createElementWithText("section", undefined, "results-section", "resultSection")
         resultsH2Wrapper = htmlBuilder.createElementWithText("div", undefined, "results-h2-wrapper", "resultsH2Wrapper", undefined, undefined)
-        resultsH2 = htmlBuilder.createElementWithText("h2", "Results", "results-h2", "resultsH2", undefined, undefined)
+        resultsH2 = htmlBuilder.createElementWithText("h2", "Results:", "results-h2", "resultsH2", undefined, undefined)
 
         itinerarySection = htmlBuilder.createElementWithText("section", undefined, "itinerary-section", "itinerarySection", undefined, undefined)
         itineraryWrapper = htmlBuilder.createElementWithText("div", undefined, "itinerary-wrapper", undefined)
@@ -49,7 +49,7 @@ let buildForm = {
         parksFieldSet = htmlBuilder.createElementWithText("fieldset")
 
         // Creating 4 user input elements
-        foodInput = htmlBuilder.createElementWithText("select", undefined, "food-select", "foodInput", undefined, undefined)
+        foodInput = htmlBuilder.createElementWithText("input", undefined, "food-select", "foodInput", undefined, "text")
         parksInput = htmlBuilder.createElementWithText("select", undefined, "parks-select", "parksInput", undefined, undefined)
         concertsInput = htmlBuilder.createElementWithText("input", undefined, "concert-input", "concertInput", undefined, "text")
         eventsInput = htmlBuilder.createElementWithText("select", undefined, "event-select", "eventSelect", undefined, undefined)
@@ -78,6 +78,7 @@ let buildForm = {
         eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", "eventSelect", undefined, "Arts")
 
         //Creating options element for the park selections
+        parkSelect = htmlBuilder.createElementWithText("option","Select Park by Feature")
         parkSelect1 = htmlBuilder.createElementWithText("option", "VolleyBall", undefined, undefined, "volleyball")
         parkSelect2 = htmlBuilder.createElementWithText("option", "Baseball Fields", undefined, undefined, "baseballFields")
         parkSelect3 = htmlBuilder.createElementWithText("option", "Basketball Courts", undefined, undefined, "basketballCourts")
@@ -88,14 +89,14 @@ let buildForm = {
         parkSelect8 = htmlBuilder.createElementWithText("option", "Parks including lakes", undefined, undefined, "lakes")
 
         // //Creating options element for the food selections
-        // foodSelect1 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect2 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect3 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect4 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect5 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect6 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect7 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
-        // foodSelect8 = htmlBuilder.createElementWithText.createElementWithText("option","",undefined,undefined,"")
+        // foodSelect1 = htmlBuilder.createElementWithText.createElementWithText("option","Burger",undefined,undefined,"Burger")
+        // foodSelect2 = htmlBuilder.createElementWithText.createElementWithText("option","Steak",undefined,undefined,"Steak")
+        // foodSelect3 = htmlBuilder.createElementWithText.createElementWithText("option","Pizza",undefined,undefined,"Pizza")
+        // foodSelect4 = htmlBuilder.createElementWithText.createElementWithText("option","Greek",undefined,undefined,"Greek")
+        // foodSelect5 = htmlBuilder.createElementWithText.createElementWithText("option","Pasta",undefined,undefined,"Pasta")
+        // foodSelect6 = htmlBuilder.createElementWithText.createElementWithText("option","Sauce",undefined,undefined,"Sauce")
+        // foodSelect7 = htmlBuilder.createElementWithText.createElementWithText("option","Drinks",undefined,undefined,"Drinks")
+        // foodSelect8 = htmlBuilder.createElementWithText.createElementWithText("option","Yo Momma",undefined,undefined,"Yo Momma")
 
 
         // Creating button for fieldset
@@ -115,7 +116,7 @@ let buildForm = {
         // parksInput.classList.add("dropdown")
 
         //Input placeholders
-        foodInput.placeholder = "search by food type"
+        foodInput.placeholder = "🍻 Come Back at Happy Hour 🍻"
         parksInput.placeholder = "parks by feature"
         concertsInput.placeholder = "concerts input"
         eventsInput.placeholder = "search events"
@@ -153,6 +154,7 @@ let buildForm = {
         eventsInput.appendChild(eventSelect5)
 
         //Appending parks options to parkSelect element
+        parksInput.appendChild(parkSelect   )
         parksInput.appendChild(parkSelect1)
         parksInput.appendChild(parkSelect2)
         parksInput.appendChild(parkSelect3)
@@ -196,8 +198,9 @@ let buildForm = {
         // Adding classes to style using bootstrap
         eventsInput.classList.add("custom-select")
         parksInput.classList.add("custom-select")
-        foodInput.classList.add("custom-select")
-        concertsInput.classList.add("form-control")
+        foodInput.disabled = true;
+        // foodInput.classList.add("disabled")
+        // concertsInput.classList.add("form-control")
     }
 
 }
