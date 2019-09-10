@@ -15,12 +15,13 @@ let buildForm = {
         divWrapper = htmlBuilder.createElementWithText("div", undefined, "div-wrapper", "wrapper")
         mainHeader = htmlBuilder.createElementWithText("header", undefined, "main-header", "header", undefined, undefined)
         h1Wrapper = htmlBuilder.createElementWithText("div", undefined, "h1-wrapper", "h1Wrapper", undefined, undefined)
-        h1 = htmlBuilder.createElementWithText("h1", "🥂 Welcome Batch's 🍆💋", "H-One", undefined, undefined, undefined)
+        h1 = htmlBuilder.createElementWithText("h1", "🥂 Welcome Batch's 💋", "H-One", undefined, undefined, undefined)
 
         //main body variable which contains the main content
         mainBody = htmlBuilder.createElementWithText("main", undefined, "main-body", "mainBody", undefined, undefined)
         h2Wrapper = htmlBuilder.createElementWithText("div", undefined, "h2-wrapper", "h2Wrapper", undefined, undefined)
-        h2 = htmlBuilder.createElementWithText("h2", "Aint no laws, while drinking the Claws!", "h2-search", "h2Search", undefined, undefined)
+        h2 = htmlBuilder.createElementWithText("h2", "'Aint no laws, while drinking the Claws!'", "h2-search", "h2Search", undefined, undefined)
+        h2Two = htmlBuilder.createElementWithText("h2", "Operation: Plan Nash!", "h2-search", "h2Plan", undefined, undefined)
 
         //Creating 1st & 2nd articles. The first article will hold the form containing fieldsets and user inputs 
         // The second article will contain the results and itinerary sections.
@@ -70,7 +71,7 @@ let buildForm = {
         // Creating options for events select element
 
         // eventSelect.setAttribute = "selected,selected"
-        eventSelect = htmlBuilder.createElementWithText("option", "Select Event Type", "eventSelect", undefined, "Select Event Type")
+        eventSelect = htmlBuilder.createElementWithText("option", "Select Event Type 🤘", "eventSelect", undefined, "Select Event Type")
         eventSelect1 = htmlBuilder.createElementWithText("option", "Food & Drink", "eventSelect", undefined, "Food_and_Drink")
         eventSelect2 = htmlBuilder.createElementWithText("option", "Family Friendly", "eventSelect", undefined, "Family")
         eventSelect3 = htmlBuilder.createElementWithText("option", "Hobbies", "eventSelect", undefined, "Hobbies")
@@ -78,7 +79,7 @@ let buildForm = {
         eventSelect5 = htmlBuilder.createElementWithText("option", "Visual Arts", "eventSelect", undefined, "Arts")
 
         //Creating options element for the park selections
-        parkSelect = htmlBuilder.createElementWithText("option","Select Park by Feature")
+        parkSelect = htmlBuilder.createElementWithText("option","Select Park by Feature 🏞")
         parkSelect1 = htmlBuilder.createElementWithText("option", "VolleyBall", undefined, undefined, "volleyball")
         parkSelect2 = htmlBuilder.createElementWithText("option", "Baseball Fields", undefined, undefined, "baseballFields")
         parkSelect3 = htmlBuilder.createElementWithText("option", "Basketball Courts", undefined, undefined, "basketballCourts")
@@ -117,9 +118,9 @@ let buildForm = {
 
         //Input placeholders
         foodInput.placeholder = "🍻 Come Back at Happy Hour 🍻"
-        parksInput.placeholder = "parks by feature"
-        concertsInput.placeholder = "concerts input"
-        eventsInput.placeholder = "search events"
+        parksInput.placeholder = "parks by feature "
+        concertsInput.placeholder = "Search By Band or Genre 🎙"
+        eventsInput.placeholder = "search events "
 
         //Appending the div wrapper, header and h1 one to display container then console.logging the results
         displayContainer.appendChild(divWrapper)
@@ -131,6 +132,7 @@ let buildForm = {
         //Appending the main body to the display container and then appending corresponding child elements
         divWrapper.appendChild(mainBody)
         mainBody.appendChild(h2Wrapper)
+        h2Wrapper.appendChild(h2Two)
         h2Wrapper.appendChild(h2)
 
 

@@ -10,11 +10,16 @@
 /* added background image into header */
 h1{
     background-image: url(https://cdn.pixabay.com/photo/2018/05/23/11/21/abstract-3423816__480.jpg);
-    border: outset goldenrod 3px;
+    border: inset goldenrod 3px;
     text-shadow: -2px -2px 0 #000,
     2px -2px 0 #000,
     -2px 2px 0 #000,
     2px 2px 0 #000 
+}
+
+.h2Plan {
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .h2Search{
@@ -44,14 +49,13 @@ border-bottom: inset 5px goldenrod;
 /* adding border and background color to form */
 form{
     width: 50%;
-    border: outset pink 15px;
+    border: inset goldenrod 10px;
     margin: 10px;
-    background-color: gray;
-}
+    background-image: linear-gradient(pink,purple, black);
+} 
 
 /* adding background color and border to the input fields */
 #event-select, #parks-select, #food-select, #concert-input {
-/*     width: 50%; */
     height: auto;
     border: solid 2px goldenrod;
     background-color: #261008;
