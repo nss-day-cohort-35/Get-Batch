@@ -1,5 +1,120 @@
+/*adding styling to buttons on form*/
 .btn {
-  margin: 2px;
-  padding: 2px;
+    margin: 2px;
+    padding: 2px;
+    width: 50%;
+    align-content: center;
+    
 }
 
+/* added background image into header */
+h1{
+    background-image: url(https://cdn.pixabay.com/photo/2018/05/23/11/21/abstract-3423816__480.jpg);
+    border: outset goldenrod 3px;
+    text-shadow: -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000 
+}
+
+.h2Search{
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000 
+}
+
+.resultsH2Wrapper {
+    width: 20%;
+}
+
+main {
+    display: flex;
+}
+
+/* center article 1 and header */
+.article1{
+    display: flex;
+    justify-content: center;
+/*     border: outset pink; */
+margin-bottom: 10px;
+border-bottom: inset 5px goldenrod;
+}
+
+/* adding border and background color to form */
+form{
+    width: 50%;
+    border: outset pink 15px;
+    margin: 10px;
+    background-color: gray;
+}
+
+/* adding background color and border to the input fields */
+#event-select, #parks-select, #food-select, #concert-input {
+/*     width: 50%; */
+    height: auto;
+    border: solid 2px goldenrod;
+    background-color: #261008;
+    color: pink;
+}
+
+::placeholder {
+    color: pink;
+}
+
+input{
+    width: 100%;
+}
+
+/* spacing out the two sections in the second article */
+.secondArticle {
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: column; */
+}
+
+/* adding border and background color to itinerary list */
+.itinerarySection {
+    border: outset goldenrod 4px;
+    padding: 3px;
+    background-color: gray;
+    width: 40%;
+    margin-bottom: 10px;
+    background-image: linear-gradient(pink,purple);
+    color: black;
+}
+
+/* aligning text */
+h1, h2 {
+    text-align: center;
+}
+
+/* underlining my itinerary header */
+#my-itinerary {
+    text-decoration: underline;
+}
+
+/* addding border and background color to results header */
+.resultsH2 {
+    border: outset goldenrod 4px;
+    padding: 3px;
+    background-color: gray;
+    background-image: linear-gradient(pink,purple);
+    color: black;
+}
+
+/* adding border and background color to the results section */
+.resultSection {
+    border: inset goldenrod 4px;
+    padding: 3px;
+    background-image: linear-gradient(pink,purple);
+    color: black;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+/* adding background image to the whole body */
+.bodyTag {
+    background-image: url(https://cdn.pixabay.com/photo/2015/01/21/13/28/silhouette-606701__480.jpg);
+    color: #F2B3C4
+}
